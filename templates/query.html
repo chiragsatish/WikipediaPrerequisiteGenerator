@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WikiContext</title>
+	<meta name="description" content="For Fantastic Four">
+	<meta name="author" content="Avinash Bhat">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='normalize.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='skeleton.css') }}">	
+</head>
+
+<body>
+ <div class="container">
+    <div class="row">
+      <div class="two columns" style="margin-top: 5%">
+        <h5>WikiContext</h5>
+      </div>
+      <div class="ten columns" style="margin-top: 5%">
+
+        <div class="two columns" style="margin-left: 72%;">
+          <button type="button" onclick="window.location.href='{{ url_for('search') }}';">New Search</button> <!-- route to page 5-->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve column" style="margin-top: 5%">
+
+        <h3 style="align-content: center;">Select how you want to proceed</h3>
+        <p style="text-align: justify;">Recommended search ensures that the keywords are relevant to the subject. Lenient search employs liberal search parameters compared to recommended search. Hence, the results produced may or may not be relevant.</p>
+        
+        <div style="text-align: center;">
+          <form style="align-content: center;" method="POST">
+          <input type="submit" name="submit" value="Recommended Search" style="display: inline-block;">
+          <input type="submit" name="submit" value="Lenient Search" style="display: inline-block;">
+          </form>
+        </div>      
+      </div>
+    </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
